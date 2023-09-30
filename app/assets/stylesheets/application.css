@@ -34,11 +34,15 @@
 }
 
 .main-page-margin {
-  margin-bottom: 100px;
+  margin-bottom: auto;
 }
 
 .main-container {
-  height: 80%;
+  height: 90%;
+}
+
+.footer {
+  height: 20%;
 }
 
 
