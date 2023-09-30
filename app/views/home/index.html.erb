@@ -1,0 +1,22 @@
+<div class="margin-index row mx-5">
+  <div class="col-md-7 d-flex flex-column justify-content-center align-items-center">
+    <h1 class="display-1 mb-4">Free soap, on us.</h1>
+    <h5 class="mb-5 fst-italic">try SAOLA's organic ginseng soap today - your skin won't regret it.</h5>
+
+    <form action="/submit_form" method="post">
+        <%= csrf_meta_tags %>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="first_name" id="exampleFirstName" aria-describedby="emailHelp" placeholder="first name">
+        </div>
+        <div class="mb-4">
+            <input type="email" class="form-control" name="email" id="exampleEmail" placeholder="email">
+            <div id="emailHelp" class="form-text">we'll never share your email with anyone else.</div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="background: #faa5a5;
+        border: #faa5a5;">Get your free soap</button>
+    </form>
+  </div>
+  <div class="col-md-5 d-flex align-items-center justify-content-center">
+    <%=image_tag("yellow.png", width: "130%")%>
+  </div>
+</div>
