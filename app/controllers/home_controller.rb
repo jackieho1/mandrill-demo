@@ -1,6 +1,8 @@
 require 'MailchimpTransactional'
 
 class HomeController < ApplicationController
+  MANDRILL_API_KEY = ENV["MANDRILL_API_KEY"]
+
   def index
     # This is where all the logic will live for the webpage, home/index
   end
@@ -12,8 +14,9 @@ class HomeController < ApplicationController
     first_name = params[:first_name]
     @email = params[:email]
     Rails.logger.info(@email)
+    puts "Hello, #{MANDRILL_API_KEY}!"
 
-    client = MailchimpTransactional::Client.new('md-RqgzXVEf9GJZ0hOWOT-8ig')
+    client = MailchimpTransactional::Client.new(MANDRILL_API_KEY)
     message_content = {
       from_email: "hello@jackieho.xyz",
       from_name: first_name,
